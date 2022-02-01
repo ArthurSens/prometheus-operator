@@ -3,15 +3,15 @@ module github.com/prometheus-operator/prometheus-operator
 go 1.17
 
 require (
-	github.com/alecthomas/units v0.0.0-20210927113745-59d0afb8317a
-	github.com/asaskevich/govalidator v0.0.0-20200907205600-7a23bdc65eef
+	github.com/alecthomas/units v0.0.0-20211218093645-b94a6e3cc137
+	github.com/asaskevich/govalidator v0.0.0-20210307081110-f21760c49a8d
 	github.com/blang/semver/v4 v4.0.0
 	github.com/brancz/kube-rbac-proxy v0.11.0
 	github.com/docker/distribution v2.7.1+incompatible
 	github.com/evanphx/json-patch/v5 v5.6.0
 	github.com/ghodss/yaml v1.0.0
 	github.com/go-kit/log v0.2.0
-	github.com/go-openapi/swag v0.19.15
+	github.com/go-openapi/swag v0.21.1
 	github.com/gogo/protobuf v1.3.2
 	github.com/google/go-cmp v0.5.7
 	github.com/hashicorp/go-version v1.4.0
@@ -20,10 +20,10 @@ require (
 	github.com/oklog/run v1.1.0
 	github.com/pkg/errors v0.9.1
 	github.com/prometheus-community/prom-label-proxy v0.4.1-0.20211215142838-1eac0933d512
-	github.com/prometheus-operator/prometheus-operator/pkg/apis/monitoring v0.53.1
-	github.com/prometheus-operator/prometheus-operator/pkg/client v0.53.1
+	github.com/prometheus-operator/prometheus-operator/pkg/apis/monitoring v0.54.0
+	github.com/prometheus-operator/prometheus-operator/pkg/client v0.54.0
 	github.com/prometheus/alertmanager v0.23.1-0.20210914172521-e35efbddb66a
-	github.com/prometheus/client_golang v1.12.0
+	github.com/prometheus/client_golang v1.12.1
 	github.com/prometheus/common v0.32.1
 	github.com/prometheus/prometheus v1.8.2-0.20211214150951-52c693a63be1
 	github.com/stretchr/testify v1.7.0
@@ -32,11 +32,11 @@ require (
 	google.golang.org/protobuf v1.27.1
 	gopkg.in/alecthomas/kingpin.v2 v2.2.6
 	gopkg.in/yaml.v2 v2.4.0
-	k8s.io/api v0.23.2
-	k8s.io/apiextensions-apiserver v0.23.2
-	k8s.io/apimachinery v0.23.2
+	k8s.io/api v0.23.3
+	k8s.io/apiextensions-apiserver v0.23.3
+	k8s.io/apimachinery v0.23.3
 	k8s.io/client-go v12.0.0+incompatible
-	k8s.io/component-base v0.23.2
+	k8s.io/component-base v0.23.3
 	k8s.io/klog/v2 v2.30.0
 	k8s.io/utils v0.0.0-20211208161948-7d6a63dca704
 )
