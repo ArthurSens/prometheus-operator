@@ -1509,29 +1509,6 @@ func ListOptions(name string) metav1.ListOptions {
 	}
 }
 
-func (c *Operator) loadConfigFromSecret(sks *v1.SecretKeySelector, s *v1.SecretList) ([]byte, error) {
-	if sks == nil {
-		return nil, nil
-	}
-
-	for _, secret := range s.Items {
-		if secret.Name == sks.Name {
-			if c, ok := secret.Data[sks.Key]; ok {
-				return c, nil
-			}
-
-			return nil, fmt.Errorf("key %v could not be found in secret %v", sks.Key, sks.Name)
-		}
-	}
-
-	if sks.Optional == nil || !*sks.Optional {
-		return nil, fmt.Errorf("secret %v could not be found", sks.Name)
-	}
-
-	level.Debug(c.logger).Log("msg", fmt.Sprintf("secret %v could not be found", sks.Name))
-	return nil, nil
-}
-
 func (c *Operator) createOrUpdateConfigurationSecret(ctx context.Context, p *monitoringv1.Prometheus, cg *prompkg.ConfigGenerator, ruleConfigMapNames []string, store *assets.Store) error {
 	// If no service or pod monitor selectors are configured, the user wants to
 	// manage configuration themselves. Do create an empty Secret if it doesn't
@@ -1635,15 +1612,15 @@ func (c *Operator) createOrUpdateConfigurationSecret(ctx context.Context, p *mon
 		}
 	}
 
-	additionalScrapeConfigs, err := c.loadConfigFromSecret(p.Spec.AdditionalScrapeConfigs, SecretsInPromNS)
+	additionalScrapeConfigs, err := prompkg.LoadConfigFromSecret(c.logger, p.Spec.AdditionalScrapeConfigs, SecretsInPromNS)
 	if err != nil {
 		return errors.Wrap(err, "loading additional scrape configs from Secret failed")
 	}
-	additionalAlertRelabelConfigs, err := c.loadConfigFromSecret(p.Spec.AdditionalAlertRelabelConfigs, SecretsInPromNS)
+	additionalAlertRelabelConfigs, err := prompkg.LoadConfigFromSecret(c.logger, p.Spec.AdditionalAlertRelabelConfigs, SecretsInPromNS)
 	if err != nil {
 		return errors.Wrap(err, "loading additional alert relabel configs from Secret failed")
 	}
-	additionalAlertManagerConfigs, err := c.loadConfigFromSecret(p.Spec.AdditionalAlertManagerConfigs, SecretsInPromNS)
+	additionalAlertManagerConfigs, err := prompkg.LoadConfigFromSecret(c.logger, p.Spec.AdditionalAlertManagerConfigs, SecretsInPromNS)
 	if err != nil {
 		return errors.Wrap(err, "loading additional alert manager configs from Secret failed")
 	}
