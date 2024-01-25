@@ -25,7 +25,7 @@ require (
 	github.com/prometheus-operator/prometheus-operator/pkg/client v0.67.1
 	github.com/prometheus/alertmanager v0.26.0
 	github.com/prometheus/client_golang v1.18.0
-	github.com/prometheus/common v0.45.0
+	github.com/prometheus/common v0.46.0
 	github.com/prometheus/prometheus v0.49.1
 	github.com/stretchr/testify v1.8.4
 	github.com/thanos-io/thanos v0.33.0
@@ -50,7 +50,6 @@ require (
 	github.com/golang-jwt/jwt/v5 v5.0.0 // indirect
 	github.com/google/gnostic-models v0.6.8 // indirect
 	github.com/gorilla/websocket v1.5.0 // indirect
-	github.com/matttproud/golang_protobuf_extensions/v2 v2.0.0 // indirect
 	github.com/mxk/go-flowrate v0.0.0-20140419014527-cca7078d478f // indirect
 )
 
@@ -120,7 +119,7 @@ require (
 	go.uber.org/atomic v1.11.0 // indirect
 	go.uber.org/goleak v1.3.0 // indirect
 	golang.org/x/crypto v0.18.0 // indirect
-	golang.org/x/oauth2 v0.15.0 // indirect
+	golang.org/x/oauth2 v0.16.0 // indirect
 	golang.org/x/sys v0.16.0 // indirect
 	golang.org/x/term v0.16.0 // indirect
 	golang.org/x/text v0.14.0 // indirect
