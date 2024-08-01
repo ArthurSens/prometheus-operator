@@ -28,7 +28,7 @@ require (
 	github.com/prometheus/common v0.55.0
 	github.com/prometheus/prometheus v0.53.1
 	github.com/stretchr/testify v1.9.0
-	github.com/thanos-io/thanos v0.35.1
+	github.com/thanos-io/thanos v0.36.0
 	golang.org/x/exp v0.0.0-20240119083558-1b970713d09a
 	golang.org/x/net v0.27.0
 	golang.org/x/sync v0.7.0
@@ -86,7 +86,7 @@ require (
 	github.com/josharian/intern v1.0.0 // indirect
 	github.com/jpillora/backoff v1.0.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
-	github.com/klauspost/cpuid/v2 v2.2.5 // indirect
+	github.com/klauspost/cpuid/v2 v2.2.8 // indirect
 	github.com/mailru/easyjson v0.7.7 // indirect
 	github.com/metalmatze/signal v0.0.0-20210307161603-1c9aa721a97a // indirect
 	github.com/minio/sha256-simd v1.0.1 // indirect
