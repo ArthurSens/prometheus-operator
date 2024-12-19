@@ -30,7 +30,7 @@ require (
 	github.com/stretchr/testify v1.10.0
 	github.com/thanos-io/thanos v0.37.2
 	golang.org/x/exp v0.0.0-20240613232115-7f521ea00fb8
-	golang.org/x/net v0.32.0
+	golang.org/x/net v0.33.0
 	golang.org/x/sync v0.10.0
 	google.golang.org/protobuf v1.36.0
 	gopkg.in/yaml.v2 v2.4.0
