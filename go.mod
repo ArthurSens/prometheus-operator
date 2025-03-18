@@ -1,6 +1,7 @@
 module github.com/prometheus-operator/prometheus-operator
 
 go 1.20
+toolchain go1.24.1
 
 require (
 	github.com/alecthomas/kingpin/v2 v2.4.0
@@ -35,13 +36,13 @@ require (
 	google.golang.org/protobuf v1.36.5
 	gopkg.in/yaml.v2 v2.4.0
 	k8s.io/api v0.32.3
-	k8s.io/apiextensions-apiserver v0.29.3
+	k8s.io/apiextensions-apiserver v0.32.1
 	k8s.io/apimachinery v0.32.3
 	k8s.io/client-go v0.32.3
 	k8s.io/component-base v0.32.3
 	k8s.io/klog/v2 v2.130.1
 	k8s.io/utils v0.0.0-20241104100929-3ea5e8cea738
-	sigs.k8s.io/controller-runtime v0.17.2
+	sigs.k8s.io/controller-runtime v0.20.3
 	sigs.k8s.io/yaml v1.4.0
 )
 
