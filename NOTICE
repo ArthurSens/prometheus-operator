@@ -1,5 +1,9 @@
-CoreOS Project
-Copyright 2015 CoreOS, Inc
+Hi，arthursens
 
-This product includes software developed at CoreOS, Inc.
-(http://www.coreos.com/).
+I found there is a CVE in kube-prometheus-stack-66.2.2, the CVE-2024-45338 is in Grafana which kube-prometheus-stack-66.2.2 is using,
+and it looks like Grafana has fix this CVE, so can you adopt a new Grafana which has no this CVE.
+ 
+https://security.snyk.io/vuln/SNYK-CHAINGUARDLATEST-GRAFANAROLLOUTOPERATORFIPS-8547424
+
+
+I have send you a email a week ago, but have not get any reply yet.
